@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { FaPlus, FaSearch, FaShoppingCart, FaTimes, FaMinus, FaBars } from "react-icons/fa";
-import Logo from "../../assets/images/Logo/Logo.svg";
-import Time from "../../assets/images/AddtoCart/time.png";
+import { FaPlus, FaSearch, FaShoppingCart, FaTimes, FaMinus, FaBars } from "react-icons/fa"; 
 import LoginModal from "../LoginModel/LoginModel";
 import { Button } from "@heroui/button";
 import AppDrawer from "../Drawer";
+import { Link } from "react-router-dom"; 
 
 const placeholders = [
     "sugar",
@@ -25,7 +24,6 @@ const placeholders = [
 ];
 
 const Header = () => {
-    const [isCartOpen, setIsCartOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [placeholderIndex, setPlaceholderIndex] = useState(0);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -43,8 +41,8 @@ const Header = () => {
                 <div className="container mx-auto flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <span className="text-yellow-500 text-3xl">Insta</span>
-                        <span className="text-green-500 text-3xl">grocery</span>
+                        <Link  to = "/" className="text-yellow-500 text-3xl">Insta</Link>
+                        <Link  to = "/" className="text-green-500 text-3xl">grocery</Link>
                     </div>
 
                     <button className="lg:hidden text-gray-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
