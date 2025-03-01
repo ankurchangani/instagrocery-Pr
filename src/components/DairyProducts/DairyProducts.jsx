@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -6,8 +6,10 @@ import { FreeMode } from "swiper/modules";
 import { MdAccessTime } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DairyProduct from "../../assets/images/DairyProducts/DairyProducts1.jpg";
+import { useNavigate } from "react-router-dom";
 
 const dairyProducts = new Array(14).fill({
+  id: 1,
   image: DairyProduct,
   name: "Amul Taaza Toned Fresh Milk",
   quantity: "500 ml",
@@ -17,6 +19,7 @@ const dairyProducts = new Array(14).fill({
 
 const DairyProducts = () => {
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
     <section className="py-4 bg-white">
@@ -53,7 +56,10 @@ const DairyProducts = () => {
         >
           {dairyProducts.map((product, index) => (
             <SwiperSlide key={index} className="min-w-[150px]">
-              <div className="bg-white border border-gray-300 shadow-lg p-2 rounded-lg">
+              <div
+                className="bg-white border border-gray-300 shadow-lg p-2 rounded-lg cursor-pointer"
+                onClick={() => navigate(`/product/${product.id}`)}
+              >
                 {/* Product Image */}
                 <div className="flex justify-center">
                   <img

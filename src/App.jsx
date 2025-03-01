@@ -1,10 +1,9 @@
 import './App.css'
+import { Route, Routes } from 'react-router'
 import Header from './components/Header/Header'
-import Banner from './components/Banner/Banner'
-import ProductDetailsImg from './components/ProductDetalisImg/ProductDetalisImg'
-import DairyProducts from './components/DairyProducts/DairyProducts'
 import Footer from './components/Footer/Footer'
-import { Button } from '@heroui/button'
+import ProductDetails from './components/ProductDetails/ProductDetails'
+import Home from './components/Home/Home'
 
 function App() {
 
@@ -12,9 +11,10 @@ function App() {
 
     <>
       <Header/>
-      <Banner/>
-      <ProductDetailsImg/>
-      <DairyProducts/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
       <Footer/>
     </>
   )
