@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaSearch, FaShoppingCart, FaTimes, FaMinus, FaBars } from "react-icons/fa"; 
-import LoginModal from "../LoginModel/LoginModel";
+
 import { Button } from "@heroui/button";
 import AppDrawer from "../Drawer";
 import { Link } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const placeholders = [
     "sugar",
@@ -26,7 +27,7 @@ const placeholders = [
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [placeholderIndex, setPlaceholderIndex] = useState(0);
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    // const [isLoginOpen, setIsLoginOpen] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -34,6 +35,12 @@ const Header = () => {
         }, 2000);
         return () => clearInterval(interval);
     }, []);
+
+    const navigate = useNavigate();
+
+    const setIsLoginOpen = () => {
+        navigate('/login')
+    }
 
     return (
         <>
@@ -77,9 +84,6 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-
-            {/* Login Modal */}
-            {isLoginOpen && <LoginModal setIsLoginOpen={setIsLoginOpen} />}
         </>
     );
 };

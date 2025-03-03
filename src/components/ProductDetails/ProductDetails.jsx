@@ -94,7 +94,7 @@ const ProductPage = () => {
               </div>
             ))}
           </div>
-
+          
           {/* Product Details */}
           <div className="text-left space-y-4 w-full">
             <h3 className="text-lg font-semibold">Product Details</h3>
