@@ -8,10 +8,14 @@ import {
     useDisclosure,
 } from "@heroui/react";
 import { FaMinus, FaPlus, FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+    const navigate = useNavigate();
+    const setIsLoginOpen = () => {
+        navigate('/login')
+    }
     return (
         <>
             <Button color="success" className="text-white flex flex-col" onPress={onOpen}>
@@ -74,12 +78,12 @@ export default function App() {
                             <h3 className="font-bold">Cancellation Policy</h3>
                             <p>Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
                         </div>
-                        {/* <button
+                        <button
                             className="mt-6 w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700"
                             onClick={() => setIsLoginOpen(true)}
                         >
                             Login to Proceed
-                        </button> */}
+                        </button>
                     </div>
                 </div>
                             </DrawerBody>

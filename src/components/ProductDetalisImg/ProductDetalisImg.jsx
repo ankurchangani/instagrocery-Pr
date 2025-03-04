@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
+// Import all product images
 import product1 from '../../assets/images/Product-1-img/product-1.jpeg';
 import product2 from '../../assets/images/Product-1-img/product-2.jpeg';
 import product3 from '../../assets/images/Product-1-img/product-3.jpeg';
@@ -27,11 +29,19 @@ const productImages = [
 ];
 
 const ProductDetailsImg = () => {
+  const navigate = useNavigate();
+
   return (
     <section className='py-8'>
-      <div className='container mx-auto  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4'>
+      <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4'>
         {productImages.map((image, index) => (
-          <img key={index} src={image} alt={`Product ${index + 1}`} className='object-cover rounded-lg' />
+          <img
+            key={index}
+            src={image}
+            alt={`Product ${index + 1}`}
+            className='object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform'
+            onClick={() => navigate(`/category/${index + 1}`)}
+          />
         ))}
       </div>
     </section>

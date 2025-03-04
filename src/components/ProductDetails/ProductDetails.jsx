@@ -7,8 +7,6 @@ import PricesImg from "../../assets/images/Product-emoj/Best_Prices_Offers.png";
 import PricesImg1 from '../../assets/images/productsDetalis-img/productsDetalisImg-1.jpg'
 import PricesImg2 from '../../assets/images/productsDetalis-img/productsDetalisImg-2.jpg'
 import PricesImg3 from '../../assets/images/productsDetalis-img/productsDetalisImg-3.jpg'
-
-
 const productDetails = {
   name: "Amul Gold Full Cream Fresh Milk",
   unit: "500 ml",
@@ -34,7 +32,9 @@ const productDetails = {
 
 const ProductPage = () => {
   const [selectedImage, setSelectedImage] = useState(Product);
+
   const [backgroundPosition, setBackgroundPosition] = useState("center");
+
   const [backgroundSize, setBackgroundSize] = useState("100%");
 
   const handleMouseEnter = () => {
@@ -76,7 +76,6 @@ const ProductPage = () => {
               className="w-full h-full object-cover opacity-0"
             />
           </div>
-
 
           {/* Thumbnails */}
           <div className="flex gap-3 mt-4 justify-center">
@@ -122,7 +121,6 @@ const ProductPage = () => {
           </div>
         </section>
 
-        {/* Right Section */}
         <section className="flex flex-col space-y-6 p-6 flex-1 sticky top-6 h-fit">
           <h1 className="text-2xl text-black font-bold">{productDetails.name}</h1>
           <Breadcrumbs>

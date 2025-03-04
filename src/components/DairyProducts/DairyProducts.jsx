@@ -19,12 +19,12 @@ const dairyProducts = new Array(14).fill({
 
 const DairyProducts = () => {
   const swiperRef = useRef(null);
+  
   const navigate = useNavigate();
 
   return (
     <section className="py-4 bg-white">
       <div className="container mx-auto relative">
-        {/* Navigation Buttons */}
         <button
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg border border-gray-300 p-2 rounded-full z-10"
           onClick={() => swiperRef.current?.slidePrev()}
@@ -38,7 +38,7 @@ const DairyProducts = () => {
         >
           <FaChevronRight className="text-black text-lg" />
         </button>
-
+        
         <Swiper
           slidesPerView={7}
           spaceBetween={15}
@@ -98,5 +98,5 @@ const DairyProducts = () => {
     </section>
   );
 };
-
+  
 export default DairyProducts;
