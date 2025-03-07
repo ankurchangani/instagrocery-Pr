@@ -66,7 +66,7 @@ function App() {
         />
 
         {/* Admin Panel Route (Without Header & Footer) */}
-        <Route path="/admin/*" element={<Admin />} />
+        <Route path="/dashboard/*" element={<Admin />} />
       </Routes>
     </>
   );
