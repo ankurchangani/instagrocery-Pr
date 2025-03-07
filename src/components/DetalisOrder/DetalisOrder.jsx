@@ -8,11 +8,12 @@ const notifications = [
   { time: "24.11.2018", title: "Dinner with Organisation", desc: "A successful marketing plan relies heavily on the pulling-power of advertising copy." },
   { time: "20:15", title: "Upgrade new GUP System", desc: "A successful marketing plan relies heavily on the pulling-power of advertising copy." },
   { time: "20:15", title: "Upgrade new GUP System", desc: "A successful marketing plan relies heavily on the pulling-power of advertising copy." },
+    { time: "20:15", title: "Upgrade new GUP System", desc: "A successful marketing plan relies heavily on the pulling-power of advertising copy." },
 ];
 
 const DetalisOrder = () => {
   return (
-    <div className="w-1/4 fixed right-0 top-16 bg-white p-4 shadow-md h-screen">
+    <div className="w-1/4 fixed right-0  mt-8 top-14 bg-white p-4 shadow-md h-screen">
       <h3 className="text-lg font-semibold">Notifications & Updates</h3>
       <div className="overflow-y-auto  max-h-[calc(100vh-4rem)] mt-4">
         {notifications.map((item, index) => (

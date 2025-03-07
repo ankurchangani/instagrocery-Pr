@@ -4,8 +4,7 @@ import { FaHome, FaFileAlt, FaChartLine, FaUserCog, FaPlus } from "react-icons/f
 const Sidebar = () => {
   return (
     <div
-      className="w-[80px] h-screen fixed top-0 left-0 z-[998] bg-white shadow-md 
-                 flex flex-col items-center space-y-6 pt-10 transition-all duration-400"
+      className="w-[80px] h-screen fixed top-0 left-0 z-[998] bg-white shadow-md  flex flex-col items-center space-y-6 pt-10 transition-all duration-400"
     >
       {[
         { icon: <FaHome /> },

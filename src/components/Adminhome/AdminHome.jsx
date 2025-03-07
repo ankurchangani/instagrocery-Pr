@@ -1,9 +1,9 @@
 import React from "react";
-import ChartComponent from "../chart/chart";
-import DetalisOrder from "../DetalisOrder/DetalisOrder";
+import ChartComponent from "../chart/chart.jsx";
+import DetalisOrder from "../DetalisOrder/DetalisOrder.jsx";
 import CalendarComponent from '../Clanader/Clanader.jsx'
 import LatestMessage from '../lastestMessage/LastestMessage.jsx'
-const Home = () => {
+const AdminHome = () => {
   return (
     <div className="flex flex-1 h-screen">
       <div className="flex-1 p-6 space-y-4 ">
@@ -27,4 +27,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AdminHome;
